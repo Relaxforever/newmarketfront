@@ -1,0 +1,82 @@
+#centro{
+	width: 800px;
+	margin: auto; border: 0px solid; height: auto; overflow: hidden;
+	text-align: center;
+}
+
+#contenidos-nosotros {
+	display: flex;
+	justify-content: space-around;
+}
+
+#contenidos-paginas{
+	background: #FFF;
+	padding: 0px 0px 20px 0px;
+}
+
+#izquierda{
+	width: 300px;
+	height: auto; overflow: hidden;
+	border: 0px solid;
+	float: left;
+}
+
+.texto-contacto{
+	text-align: left;
+}
+
+.email-contacto{
+	color: #848484;
+	text-decoration: none;
+}
+
+.email-contacto:hover{
+	text-decoration: underline;
+}
+
+#derecha{
+	width: 490px;
+	border: 0px solid;
+	height: auto; overflow: hidden;
+	float: right;
+	display: flex;
+	justify-content: space-around;
+}
+
+input[type="text"], input[type="email"]{
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+
+
+
+textarea{
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.nombre-mensaje{
+	width: 95%;
+}
+
+.email-asunto{
+	width: 45%;
+}
+
+
+input[type="submit"]{
+	padding: 10px;
+	background: #0489B1;
+	color: #fff;
+	border: 1px solid #086A87;
+	border-radius: 5px;
+	margin: 15px;
+}
+
+
+

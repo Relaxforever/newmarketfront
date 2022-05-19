@@ -1,0 +1,270 @@
+
+.contenedor {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100hv;
+    background-color: white;
+
+}
+
+.box-inicio {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+
+}
+
+.box-contenido {
+    width: 65%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: white;
+    float: right;
+    border: 1px solid black;
+    border-radius: 1px;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+    
+}
+
+.titulo-categoria {
+    font-size: 19px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    flex-direction: column;
+    padding-top: 5px;
+     
+    
+}
+
+.contenedor2 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+.info-producto {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    padding: 30px;
+    border-top: 1px solid black;
+}
+
+.info-producto2 {
+    font-size: 12px;
+    margin: 0 0 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.select {
+    margin: 22px;
+}
+
+.textos-input {
+    appearance: none;
+    background: none;
+    border: none;
+    color: #002f34;
+    display: block;
+    font-size: 16px;
+    height: 48px;
+    box-sizing: border-box;
+    outline: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 50%;
+
+}
+
+.box-descripciones {
+    text-align: left;
+    margin-top: 8px;
+}
+ 
+label {
+    margin-left:6px ;
+}
+
+.input-descripcion {
+    appearance: none;
+    background: none;
+    border: none;
+    color: #002f34;
+    display: block;
+    font-size: 16px;
+    height: 150px;
+    box-sizing: border-box;
+    outline: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    
+    width: 50%;
+}
+
+.box-precio {
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(14,4,5,.2);
+    border: 1px;
+    float: left;
+    height: 0;
+    width: 100%;
+}
+
+.archivos {
+    padding: 15px;
+}
+
+.box-final {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 15px;
+    
+}
+
+.precio-input {
+    border: 1px solid #ccc !important;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+/*
+  .m-inventory {
+    margin-left: 25px;
+    &-category {
+        &-title {
+
+        }
+    }
+
+
+    &-upload {
+        
+    
+        &-container {
+            &-title {
+                
+            }
+            p {
+                opacity: 50%;
+            }
+            &-soon {
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                max-width: 1366px;
+                .close {
+                    opacity: 50%;
+                    height: 100px;
+                    width: 100px;
+                    background: #00558a;
+                    border-radius: 5px;
+                    position: relative;
+                    &:after {
+                      position: absolute;
+                      top: 0;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      content: "\274c";
+                      font-size: 50px;
+                      color: #fff;
+                      line-height: 100px;
+                      text-align: center;
+                    }
+                  }
+                  .small-x:after {
+                    content: "\d7";
+                  }
+            }
+        }
+
+
+        
+    }
+
+
+    &-desc {
+        margin-top: 20px;
+    }
+
+    &-input {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+
+    .m-inventory-cont-button {
+        button {
+        margin-bottom: 10px;
+        align-items: center;
+        appearance: none;
+        background-color: #FCFCFD;
+        border-radius: 4px;
+        border-width: 0;
+        box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+        box-sizing: border-box;
+        color: #36395A;
+        cursor: pointer;
+        display: inline-flex;
+   
+        height: 48px;
+        justify-content: center;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: box-shadow .15s,transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow,transform;
+        font-size: 18px;
+        }
+    }
+    .m-inventory-cont-button:focus {
+        button {
+        box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+      }
+      
+      .m-inventory-cont-button:hover {
+          button {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        transform: translateY(-2px);
+          }
+      }
+      
+      .m-inventory-cont-button:active {
+          button {
+        box-shadow: #D6D6E7 0 3px 7px inset;
+        transform: translateY(2px);
+          }
+      }
+
+
+
+
+
+    
+}*/

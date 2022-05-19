@@ -1,0 +1,46 @@
+
+.m-brand  {
+    margin-top: 30px;
+    background-color: 	#e1e1e1;
+    align-items: center;
+    &-images {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &-first{
+            object-fit: cover;
+            width: 700px;
+            height: 700px;
+            margin-right: 50px;
+            }
+
+        &-second{
+            object-fit: cover;
+            width: 450px;
+            height: 700px;
+            }
+
+        }
+
+        &-popup  {
+            position: absolute;
+            width: 200px;
+            //height: 100;
+            background-color: black;
+            top: 200px;
+            left: 980px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 8%;
+            text-align: center;
+            p {
+                padding: 20px;
+                font-weight: bold;
+            }
+        }
+}

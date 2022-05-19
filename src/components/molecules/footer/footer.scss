@@ -1,0 +1,65 @@
+
+.m-footer {
+    font-family: "Helvetica Neue", "Helvetica";
+    text-decoration: none;
+    appearance: none;
+}
+
+.m-main-footer {
+    color: white;
+    background-color: black;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    text-decoration: none;
+    width: 100%;
+    appearance: none;
+
+}
+
+.columnas {
+    appearance: none;
+    text-decoration: none;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: white;
+    appearance: none;
+
+}
+
+.list-unstyled {
+    color: white;
+    text-decoration: none;
+    appearance: none;
+}
+
+.direccion {
+    text-decoration: none !important;
+    appearance: none;
+    marker: none;
+}
+
+.link {
+    text-decoration: none;
+    color: white
+}
+
+.link:hover {
+    color: blue
+}
+
+.row {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    
+}
