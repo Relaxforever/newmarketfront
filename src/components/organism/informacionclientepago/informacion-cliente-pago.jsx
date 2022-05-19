@@ -21,7 +21,7 @@ const InformacionPago = () => {
 
   console.log(loading)
   const redirect = () => {
-    window.location.href = "http://localhost:3000";
+    window.location.href = "http://newmarketfront.herokuapp.com/";
 }
 
   useEffect(() => {

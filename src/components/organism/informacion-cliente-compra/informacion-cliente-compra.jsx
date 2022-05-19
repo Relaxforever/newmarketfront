@@ -17,7 +17,7 @@ const InformacionCliente = () => {
   }, [])
 
     const redirect = () => {
-      window.location.href = "http://localhost:3000/informacion-cliente-pago";
+      window.location.href = "http://newmarketfront.herokuapp.com/informacion-cliente-pago";
   }
     return (
 <div className="contenedor">        

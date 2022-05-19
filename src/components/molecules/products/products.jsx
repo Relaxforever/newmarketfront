@@ -36,7 +36,7 @@ const buyProducto = (elem) => {
 }
 
 const redirect = () => {
-    window.location.href = "http://localhost:3000/informacion-cliente-compra";
+    window.location.href = "http://newmarketfront.herokuapp.com/informacion-cliente-compra";
 }
 
 /*
