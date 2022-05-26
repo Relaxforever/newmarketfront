@@ -11,8 +11,18 @@
         padding-bottom: 10px;
 
         &-title {
-        padding-top: 30px;
-        padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+         &-logo{
+            width: 250px;
+            height: 250px;    
+            margin-top: 10px;            
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+            }
         font-size: 25px;
         }
 

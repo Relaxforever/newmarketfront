@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import './header.scss'
 import { Link } from "react-router-dom";
 import BasicModal from  "../modal-generic/modal"
+import imagenHeader from "../../../assets/imagen-corporativa.png"
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
       <>
         <header className="m-header">
             <div className="m-header-main">
-                <div  className="m-header-main-title"><h1>New Market</h1></div>
+                <div  className="m-header-main-title"> <div className="m-header-main-title-logo"><img src={imagenHeader} alt="logo-corporativo" /> </div> </div>
                 <div className="m-header-main-nav">
                    <div className='m-header-main-nav-reroute'><Link className='link-router' to='/' >Home</Link></div>
                    <div className='m-header-main-nav-reroute'><Link className='link-router' to='/productos'>Productos</Link></div>

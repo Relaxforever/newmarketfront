@@ -66,7 +66,7 @@ export default function BasicModal(props) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(objetoInicioSesion)
             };
-            const response = await fetch('http://34.70.126.150/login/users/', requestOptions);
+            const response = await fetch('http://34.70.126.150/login/users/'/*'http://127.0.0.1:8000/login/users/'*/, requestOptions);
             const data = await response.json();
             console.log(response.status);
             if (response.status === 400){

@@ -9,23 +9,67 @@ const Inventario = () => {
   const [descripcion, setDescripcion] = useState("");
   const [categoria, setCategoria] =  useState("");
   const [getCategorias, setGetCategorios]  =  useState("");
-
+  const [fileImage,setFileImage] = useState();
+  const [previewImage, setPreviewImage] = useState();
+  console.log(fileImage)
 
   const [exito,setExito] = useState(0);
   const [loading,setLoading] = useState(false);
 
   async function fetchCategoriesJSON() {
-    const response = await fetch('http://34.70.126.150/categorias/');
+    const response = await fetch('http://34.70.126.150/categorias/'/*'http://127.0.0.1:8000/categorias/'*/);
     const movies = await response.json();
     setGetCategorios(movies);
     return movies;
   }
 
+  /*async function fetchCategoriesImagen() {
+    const response = await fetch('http://127.0.0.1:8000/imagen/ejemplo1.jpg');
+    const movies = await response;
+    console.log(movies.url)
+    setPreviewImage(movies)
+    return movies;
+  }*/
+
   //console.log("El nombre del  producto ", nombre)
  // console.log("Precio del producto", precio)
   useEffect(() => {
     fetchCategoriesJSON();
+    /*fetchCategoriesImagen();*/
+    
   }, [])
+
+
+
+  const handleSubmission = () => {
+
+		const formData = new FormData();
+    formData.append('image', fileImage);
+		fetch(/*'http://127.0.0.1:8000/imagen/'*/'http://34.70.126.150/imagen/',
+			{
+
+				method: 'POST',
+
+				body: formData,
+
+			}
+		)
+			.then((response) => response.json())
+			.then((result) => {
+        CreateProduct()
+				console.log('Success:', result);
+
+			})
+
+			.catch((error) => {
+
+				console.error('Error:', error);
+
+			});
+
+	};
+
+
 
 
   var retrievedObject = localStorage.getItem('CuentaUsuario');
@@ -35,7 +79,7 @@ const Inventario = () => {
           "producto": {
             "nombre": nombre,
              "valor": parseInt(precio),
-           "foto_productos":  { "ejemplo1": "ejemplo1", "ejemplo2":  "ejemplo2" },
+           "foto_productos": fileImage ? { "nombre": fileImage.name } : "",
            "description": descripcion
        },
        "usuario": JSON.parse(retrievedObject),
@@ -52,7 +96,7 @@ const Inventario = () => {
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(Envio_Objeto)
               };
-              const response = await fetch('http://34.70.126.150/productos/', requestOptions);
+              const response = await fetch('http://34.70.126.150/productos/'/*'http://127.0.0.1:8000/productos/'*/, requestOptions);
               const data = await response.json();
               console.log(response.status);
               if (response.status === 200){
@@ -138,7 +182,11 @@ const Inventario = () => {
                   <h2>Sube imagen del producto</h2>
                </div>
 
-                <input type="file" className="archivos" />
+                <input type="file" className="archivos" onChange={(e) => setFileImage(e.target.files[0])}/>
+
+                {/*previewImage ? <img src={previewImage.url}/> : "" */}
+
+
               </div>
 
              
@@ -151,7 +199,7 @@ const Inventario = () => {
 
       <div className="box-final">
 
-        <button className="button-1"  onClick={() => CreateProduct()}>Publicar producto</button>
+        <button className="button-1"  onClick={() => handleSubmission() /*CreateProduct()*/}>Publicar producto</button>
 
         {loading === 1 ? <div className="loader"></div> : '' }
     {exito === 1 ? <div className="messagecuenta">Producto Creado con Exito</div> : '' }

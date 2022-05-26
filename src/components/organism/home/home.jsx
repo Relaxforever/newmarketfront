@@ -29,20 +29,25 @@ const Home = () => {
   const [productos, setProductos] = useState([])
 
 
-
-  
+  async function fetchCategoriesImagen(nombre) {
+    const response = await fetch(`http://34.70.126.150/imagen/${nombre}`);
+    const movies = await response;
+    console.log(movies.url)
+    return movies.url;
+  }
 
   useEffect(() => {
     async function fetchCategoriesJSON() {
-      const response = await fetch('http://34.70.126.150/productos/');
+      const response = await fetch('http://34.70.126.150/productos/'/*'http://127.0.0.1:8000/productos/'*/);
       let movies = await response.json();
+      console.log(movies)
       movies = movies.sort(() => Math.random() - 0.5)
       let  cuttedProducts = movies.slice(0, 4)
       let productImages = []
       for (let i = 0; i < cuttedProducts.length; i++) { 
         let newProduct = cuttedProducts[i]
         //console.log(newProduct)
-        newProduct.foto_productos = listaImagenes[Math.floor(Math.random() * 10) + 1]
+        newProduct.foto_productos = await fetchCategoriesImagen(JSON.parse(newProduct.foto_productos).nombre)
         productImages.push(cuttedProducts[i]);
       }
       console.log(productImages)
