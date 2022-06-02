@@ -23,6 +23,9 @@ const InformacionPago = () => {
   const redirect = () => {
     window.location.href = "http://newmarketfront.herokuapp.com/";
 }
+const redirectToOrder = () => {
+    window.location.href = "http://newmarketfront.herokuapp.com/pedidos";
+}
 
   useEffect(() => {
     let retrievedUser = localStorage.getItem('ProductoAComprar');
@@ -132,7 +135,7 @@ console.log(Envio_Pago)
 
                         </div>
                         
-                        <div className="o-informacion-pago-ImagenEjemplo"> <img src={TarjetaCredito} /></div>
+                        <div className="o-informacion-pago-ImagenEjemplo"> <img src={TarjetaCredito} alt='tarjeta-view'/></div>
 
                         
 
@@ -205,6 +208,7 @@ console.log(Envio_Pago)
             {referenciaFactura ? (<p>Referencia de Factura {referenciaFactura.factura_id}  </p>) : ""}
 
             <div className="o-informacion-pago-tarjetainfo-button"> <button className="button-1" onClick={() => redirect()}>Volver a Inicio</button></div>
+            <div className="o-informacion-pago-tarjetainfo-button"> <button className="button-1" onClick={() => redirectToOrder()}>ir a mis pedidos</button></div>
             
           </Box> 
           

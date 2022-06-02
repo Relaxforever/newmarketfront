@@ -9,6 +9,7 @@ import Products from './routes/products';
 import InformacionCliente from './routes/informacion-cliente-compra';
 import Brand from './routes/marcas'
 import InformacionClientePago from './routes/informacion-cliente-pago'
+import Pedido from "./routes/pedido"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route path='contacto' element={<Contacto />} />
         <Route path='informacion-cliente-compra' element={<InformacionCliente />} />
         <Route path='informacion-cliente-pago' element={<InformacionClientePago />} />
+        <Route path='pedidos' element={<Pedido />} />
 
       </Routes>
     </BrowserRouter>
